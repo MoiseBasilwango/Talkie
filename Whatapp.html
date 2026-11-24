@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Whatsapp</title>
+    <style>
+    body {
+      padding-top: 120px;
+      padding-right: 0px;
+      padding-bottom: 175px;
+    }
+    
+      .header {
+        background-color: white;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 105px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: middle;
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .title {
+        color: rgb(34, 180, 97);
+        font-weight: bold;
+        font-size: 24px;
+      }
+      
+      .top-right-section {
+        display: flex;
+        align-items: end;
+      }
+      
+      .icon {
+        height: 20px;
+        width: 30px;
+        padding-right: 0px;
+        margin-right: 0px;
+        margin-bottom: 4px;
+      }
+      
+      .search-section {
+        background-color: rgba(40,40,40,0.1);
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+      }
+      img {
+        width: 25px;
+        margin-right: 4px;
+        margin-left: 25px;
+      }
+      input {
+        height: 55px;
+        flex: 1;
+        margin-right: 30px;
+        border: none;
+        background-color: transparent;
+        
+      }
+      input::placeholder {
+        color: #4C4C4C;
+      }
+      
+    .text-message,
+    .username {
+      vertical-align: middle;
+      margin-top: 0;
+      margin-bottom: 0;
+      <dd id=""></dd>
+    }
+    
+    .message {
+      flex: 1;
+      margin-left: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      
+      transition: border-radius 0.30s, background-color 0.10s;
+    }
+    
+    .message:active {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .message-left-section {
+      height: 50px;
+      margin-right: 8px;
+    }
+    
+    .user-profile {
+      vertical-align: middle;
+      width: 45px;
+      border-radius: 25px;
+      margin-left: 0;
+    }
+    
+    .message-middle-section {
+      font-size: 16px;
+      vertical-align: middle;
+      flex: 1;
+    }
+    
+    .text {
+      display: flex;
+      align-items: middle;
+    }
+    
+    .username {
+      font-size: 16px;
+      font-weight: 420;
+      flex: 1;
+      margin-bottom: 4px;
+    }
+    
+    .text-message {
+      font-size: 14.5px;
+      
+      padding-right: 0;
+      color: grey;
+      flex: 1;
+    }
+    
+    .date {
+      margin-top: 2px;
+      color: rgb(34, 167, 97);
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 2px;
+      margin-left: 0;
+    }
+    
+    .no-space{
+      margin-left: 10px;
+    }
+    
+    .message-number {
+      background-color: rgb(34, 167, 97);
+      color: white;
+      border: none;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 450;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 2.9px;
+      padding-bottom: 2.9px;
+      border-radius: 50px;
+    }
+    
+    .contacts {
+      margin-right: 10px;
+    }
+    
+    .shortcuts {
+      position: fixed;
+      right: 5px;
+      bottom: 90px;
+    }
+    
+    .ai {
+      background-color: #F6F5F3;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+      
+      width: 25px;
+      padding: 8px;
+      
+      border-radius: 15px;
+      margin-left: 13px;
+      margin-bottom: 12px;
+    }
+    
+    .selector {
+      background-color: #1DAB61;
+      
+      width: 30px;
+      padding: 10px;
+      
+      border-radius: 15px;
+      margin-left: 8px;
+    }
+    
+    .footer {
+      background-color: white;
+      border-top-style: solid;
+      border-top-color: rgba(110, 110, 115, 1);
+      border-top-width: 1px;
+      padding-bottom: 10px;
+      padding-top: 12px;
+        
+      display: flex;
+      justify-content: space-between;
+      align-items: middle;
+        
+      position: fixed;
+      left: 0px;
+      right: 0px;
+      bottom: 0;
+      height: 63px;
+    }
+    
+    .f-icon {
+      height: 50px;
+      width: 50px;
+    }
+    
+    .chat {
+      height: 45px;
+      width: 50px;
+    }
+    
+    .communities {
+      height: 45px;
+      width: 80px;
+    }
+    
+    .call {
+      margin-top: 0px;
+      height: 46px;
+      width: 35px;
+      margin-right: 30px;
+    }
+    </style>
+  </head>
+<body>
+  <div class="header">
+    <div class="top-section">
+      <div class="title">
+        Whatsapp
+      </div>
+      <div class="top-right-section">
+        <img class="icon" src="icon/camera.jpg">
+        <img class="icon" src="icon/option.jpg">
+      </div>
+    </div>
+    
+    <div class="search-section">
+      <img src="Icon/search.svg">
+      <input type="search" placeholder="Ask Meta AI or Search">
+    </div>
+  </div>
+  <div class="contacts">
+    <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/google-ceo.webp">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Google Ceo
+        </p>
+        <p class="date">
+          2026/05/25
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Google Ceo: Are you sure, that you are ready...
+        </span>
+        <button class="message-number">
+          7
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/channel-1.jpeg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Markques Brownlee
+        </p>
+        <p class="date">
+          2026/06/11
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Markques brownlee: 🎤 Voice message (0:08)
+        </span>
+        <button class="message-number">
+          4
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/MrSS.jpeg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Mr SuperSimple.dev
+        </p>
+        <p class="date">
+          2026/06/11
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Moses: this is the best i can do in software...
+        </span>
+        <div class="no-space">
+        <button class="message-number">
+          10
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/default.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Grade 11A
+        </p>
+        <p class="date">
+          2026/06/11
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          +27 79 026 1843: 🏞 Outstanding Life sci...
+        </span>
+        <button class="message-number">
+          27
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/Carlos.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Carlos
+        </p>
+        <p class="date">
+          2026/06/10
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Carlos: no
+        </span>
+        <button class="message-number">
+          4
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/superman.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Superman
+        </p>
+        <p class="date">
+          2026/06/11
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Superman: it's not my name, it's from a char...
+        </span>
+        <div class="no-space">
+        <button class="message-number">
+          10
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/Andrew.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Andrew Smith
+        </p>
+        <p class="date">
+          2026/04/08
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Moses: is this the best you can do in css, let...
+        </span>
+        <button class="message-number">
+          10
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/default.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          IT Specialist Team
+        </p>
+        <p class="date">
+          2026/06/04
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          +55 789 99 1843: Don't forget about the pro...
+        </span>
+        <button class="message-number">
+          27
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/default.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Google IT Team
+        </p>
+        <p class="date">
+          2026/06/18
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Google Ceo: Good morning everyone i hope...
+        </span>
+        <button class="message-number">
+          41
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/mycat.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Mrs Meowth
+        </p>
+        <p class="date">
+          2026/06/11
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Mrs Meowth: *meow* I want food! *meow*...
+        </span>
+        <button class="message-number">
+          4
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/Mr-Beast.webp">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Mr Beast
+        </p>
+        <p class="date">
+          2026/06/11
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Mr Beast: what skills can you offer us other t...
+        </span>
+        <button class="message-number">
+          4
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/uncle-max.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Uncle Max
+        </p>
+        <p class="date">
+          2026/06/12
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Moses: uncle max is it good to use a HDD...
+        </span>
+        <div class="no-space">
+          <button class="message-number">
+            15
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/default.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Boss Mathew 
+        </p>
+        <p class="date">
+          2026/06/09
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Moses: I did check on all your employees if...
+        </span>
+        <button class="message-number">
+          10
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/Amy.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          Amy
+        </p>
+        <p class="date">
+          2026/06/11
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Amy: Oh i didn't know we did that in the gro...
+        </span>
+        <button class="message-number">
+          6
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/Dave.jpg">
+    </div>
+    
+    <div class="message-middle-section">
+      <div class="text">
+        <p class="username">
+          +55 789 99 1843
+        </p>
+        <p class="date">
+          2026/06/09
+        </p>
+      </div>
+      <div class="text">
+        <span class="text-message">
+          Moses: I didn't know we could do that with a...
+        </span>
+        <button class="message-number">
+          8
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <p style="color: grey; font-size: 13px; font-weight: 500; margin-top: 30px; margin-left: 80px;">Tap and hold on chat for more options</p>
+  <hr/>
+  <p style="color: grey; font-size: 14px; margin-left: 50px;">
+    Your personal message are <span style="color: #1DAB61;">end-to-end encrypted</span>
+  </p>
+  <div class="shortcuts">
+    <div>
+      <img class="ai" src="icon/AI.jpg">
+    </div>
+    <div>
+      <img class="selector" src="icon/contact-select.jpg">
+    </div>
+  </div>
+  
+    <div class="footer">
+      <img class="chat" src="icon/chat.jpg">
+      <img class="f-icon" src="icon/update.jpg">
+      <img class="communities" src="icon/communities.jpg">
+      <img class="call" src="icon/call.jpg">
+    </div>
+</body>
+</html>

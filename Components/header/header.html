@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>whatsapp's Header</title>
+  <style>
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: middle;
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    
+    .top-right-section {
+      display: flex;
+      align-items: middle;
+    }
+    
+    .icon {
+      height: 20px;
+      width: 20px;
+    }
+    
+    .search-section {
+      background-color: rgba(255,255,255,0.05);
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border-radius: 25px;
+    }
+    img {
+      width: 25px;
+      margin-right: 4px;
+      margin-left: 25px;
+    }
+    input {
+      border: none;
+      background-color: transparent;
+    }
+    input::placeholder {
+      color: rgba(174,174,174, 1);
+    }
+  </style>
+</head>
+
+<body style="background-color: rgba(20, 20, 25, 1);">
+  <div class="header">
+    <div class="top-section">
+      <div class="title">
+        Whatsapp
+      </div>
+      <div class="top-right-section">
+        <img class="icon" src="icon/camera.jpg">
+        <img class="icon" src="icon/option.jpg">
+      </div>
+    </div>
+    
+    <div class="search-section">
+      <img src="Icon/search.svg">
+      <input type="search" placeholder="Ask Meta AI or Search">
+    </div>
+  </div>
+  <div class="message">
+    <div class="message-left-section">
+      <img class="user-profile" src="profile/MrSS.jpeg">
+    </div>
+    
+    <div class="message-middle-section">
+        <p class="username">
+          Mr SuperSimple.dev
+        </p>
+        <p class="text-message">
+          Dave: Voice message (0:08)
+        </p>
+    </div>
+    
+      <div class="message-right-section">
+        <p class="date">2026/06/11</p>
+        <button class="message-number">4</button>
+      </div>
+    </div>
+</body>
+
+</html>
